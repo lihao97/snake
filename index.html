@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link href="img/favicon.ico">
+	<title>贪吃蛇</title>
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+			background: #005500;
+		}
+		.center, .right {
+			position :fixed;
+		}
+		#map {
+			background: #1A3500;
+			background-size:100%;
+			position: relative;
+		}
+		#map .snake, #map .food {
+			background: rgb(9,145,34);
+			position: absolute;
+			z-index: 3;
+		}
+		#map .snake0 {
+			background: rgba(9,145,34,1) url("img/snake_header.webp");
+			background-size: 100%;
+		}
+		#map .food {
+			background: orangered;
+		}
+		#map .score {
+			display:block;
+			position: absolute;
+			top: 50%;
+			left : 50%;
+			color: rgb(0,100,0);
+			cursor: default;
+			text-align:center;
+		}
+		#map .allscore {
+			display:block;
+			position: absolute;
+			top: 50%;
+			left : 50%;
+			background: #58A955;
+			overflow: auto;
+			text-align : center;
+			z-index: 5;
+			display: none;
+		}
+		#map .allscore h1{
+			margin: 20px 0 20px 0;
+			padding: 0;
+		}
+		#map .allscore ul, #map .allscore li{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 16px;
+			margin: 0 0 10px 0;
+		}
+		#map .allscore li {
+			display: inline-block;
+		}
+		#roulette {
+			background: url("img/snake_roulette.png");
+			background-size: 100%;
+		}
+		* {
+			cursor : pointer;
+		}
+	</style>
+	<script src="js/jq.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="center">
+		<div id="map">
+			<span class="score"></span>
+			<span class="allscore a_s">
+				<h1 class="a_s">您的得分</h1>
+				<ul class="a_s">
+				</ul>
+			</span>
+		</div>
+	</div>
+	<div class="right">
+		<div id="roulette"></div>
+	</div>
+</body>
+</html>
